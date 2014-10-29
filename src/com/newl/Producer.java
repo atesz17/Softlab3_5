@@ -1,15 +1,19 @@
 package com.newl;
 
 
-public class Producer {
+public class Producer extends Thread {
 	
-	static int szam = 0;
-	
+	int szam = 0;
 	String szoveg;
 
 	public Producer(String sz)	{
 		
 		szoveg = sz;
+	}
+	
+	@Override
+	public void run()	{
+		go();
 	}
 
 	public void go()	{
